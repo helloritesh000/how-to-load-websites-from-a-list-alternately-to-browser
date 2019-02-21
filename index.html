@@ -1,0 +1,23 @@
+<!doctype>
+<html>
+<body>
+
+<iframe id="ifrm" src="" width="300" height="300"></iframe>
+
+<script type="text/javascript">
+	var arraySites = ["index3.html", "index2.html", "index1.html"];
+	var counter = 0;
+	var interval = setInterval(function(){ var url = arraySites.pop(); console.log(url); LoadIframe(url);} , 10*1000);
+	
+	
+function LoadIframe(arrIndex)
+{
+	if(arrIndex != null && arrIndex != undefined && arrIndex != '')
+		document.getElementById('ifrm').src = arrIndex;
+	else
+		clearInterval(interval);
+}
+</script>
+
+</body>
+</html>
